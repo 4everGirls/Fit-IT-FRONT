@@ -1,0 +1,22 @@
+<template>
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Fit IT !</a>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</template>
+
+<script>
+export default {
+    name: "HeaderNav",
+
+}
+</script>
+
+<style>
+
+</style>
