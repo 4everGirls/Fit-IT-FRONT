@@ -1,0 +1,16 @@
+<template>
+  <div>
+    <h1>여기는 챌린지 만드는 </h1>
+  </div>
+</template>
+
+<script>
+export default {
+name: MakeChallengeView,
+
+}
+</script>
+
+<style>
+
+</style>
