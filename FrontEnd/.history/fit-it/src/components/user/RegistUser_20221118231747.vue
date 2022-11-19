@@ -6,7 +6,7 @@
         <input
           type="text"
           class="form-control"
-          id="id"
+                id="id"
           placeholder="ID를 입력하세요."
         />
       </div>

@@ -21,7 +21,7 @@
       </div>
       <div class="col-12">
         <label for="passwordConfirm" class="form-label">비밀번호 확인</label>
-        <input
+        <input,
           type="password"
           class="form-control"
           id="passwordConfirm"

@@ -3,9 +3,7 @@
     <form class="row g-3">
       <div class="col-12">
         <label for="id" class="form-label">ID</label>
-        <input
-          type="text"
-          class="form-control"
+        <input type="text" class="form-control"
           id="id"
           placeholder="ID를 입력하세요."
         />
