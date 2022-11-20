@@ -52,6 +52,7 @@ export default new Vuex.Store({
       });
     },
     createUser({ commit }, user) {
+      console.log(user);
       const API_URL = `${REST_API}/userApi/signup`;
       
       axios({

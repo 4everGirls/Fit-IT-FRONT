@@ -90,21 +90,35 @@
             <input type="number" class="form-control" id="weight" placeholder="kg" />
           </div>
         </div>
+      </div>
+      <div class="col-2"></div>
+    </form>
         <!--button-->
         <div class="col text-center">
           <button type="submit" class="btn btn-primary" @click="regist">
             가입하기
           </button>
         </div>
-      </div>
-      <div class="col-2"></div>
-    </form>
   </div>
 </template>
 
 <script>
 export default {
   name: "RegistUser",
+  data() {
+    return {
+      user: {
+        id: "",
+        password: "",
+        passwordConfirm: "",
+        nickname: "",
+        gender: "",
+        birth: "",
+        height: "",
+        weight: "",
+      },
+    };
+  },
   methods: {
     regist() {
       if (
@@ -121,18 +135,7 @@ export default {
         return;
       }
 
-      let user = {
-        id: this.id,
-        password: this.password,
-        passwordConfirm: this.passwordConfirm,
-        nickname: this.nickname,
-        gender: this.gender,
-        birth: this.birth,
-        height: this.height,
-        weight: this.weight,
-      };
-
-      this.$store.dispatch("createUser", user);
+        this.$store.dispatch("createUser", this.user);
     },
   },
 };
