@@ -11,7 +11,6 @@ const REST_API = `http://localhost:9999`;
 export default new Vuex.Store({
   plugins: [createPersistedState()],
   state: {
-    token: "",
     loginUser: null,
     videos: [],
     video: null,
@@ -19,9 +18,8 @@ export default new Vuex.Store({
   getters: {
   },
   mutations: {
-    LOGIN_USER(state, {user, token}) {
-      state.user = user;
-      state.token = token;
+    LOGIN_USER(state, user) {
+      state.loginUser = user;
     },
     SEARCH_VIDEO(state, videos) {
       state.videos = videos

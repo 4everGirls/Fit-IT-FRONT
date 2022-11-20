@@ -14,7 +14,7 @@
             alt="video-img"
           />
           <div class="card-body">
-            <p class="card-text text-truncate">
+            <p class="card-text tex">
               {{ video.snippet.title }}
             </p>
             <button class="btn btn-primary">추가</button>
@@ -51,9 +51,4 @@ export default {
 };
 </script>
 
-<style>
-.card-text {
-  font-size: 15px;
-  font-weight: 100;
-}
-</style>
+<style></style>

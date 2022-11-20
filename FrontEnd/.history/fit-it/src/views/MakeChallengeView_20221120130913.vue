@@ -2,24 +2,11 @@
   <div class="container">
     <!--search-container-->
     <div class="row">
-      <search-video></search-video>
-    </div>
-    <!--result form-->
-    <div class="row">
-      <div class="col-1"></div>
-      <div class="col-6">
-        <search-result></search-result>
+        <search-video></search-video>
       </div>
-      <!-- 챌린지 만들기 폼-->
-      <div class="col-2">
-
-      </div>
-      <div class="col-2">
-
-      </div>
-      <div class="col-1"></div>
-    </div>
-    </div>
+      <!--result form-->
+      <search-result></search-result>
+  </div>
 </template>
 
 <script>

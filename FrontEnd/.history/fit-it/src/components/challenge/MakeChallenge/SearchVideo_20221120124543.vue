@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="flex-container mb-5">
+    <div class="flex-container mb-35>
       <div class="flex-item">
         <h3 class="title">당신만의 챌린지를 만들어 보세요!</h3>
       </div>

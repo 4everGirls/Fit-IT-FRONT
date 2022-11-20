@@ -51,9 +51,4 @@ export default {
 };
 </script>
 
-<style>
-.card-text {
-  font-size: 15px;
-  font-weight: 100;
-}
-</style>
+<style></style>

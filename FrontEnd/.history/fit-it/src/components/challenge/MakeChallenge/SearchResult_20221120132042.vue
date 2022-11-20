@@ -53,7 +53,7 @@ export default {
 
 <style>
 .card-text {
-  font-size: 15px;
-  font-weight: 100;
+  font-size: small;
+  font-weight: ;
 }
 </style>

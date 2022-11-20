@@ -1,27 +1,22 @@
 <template>
   <div class="result-container">
-    <div class="row">
-      <li
-        class="col-3 m-4"
-        v-for="video in videos"
-        :key="video.videoId"
-        :video="video"
-      >
-        <div class="card" style="width: 10rem">
+    <li v-for="video in videos" :key="video.videoId" :video="video">
+      <div class="list-container column">
+        <div class="card" style="width: 18rem">
           <img
             class="card-img-top"
             :src="video.snippet.thumbnails.high.url"
             alt="video-img"
           />
           <div class="card-body">
-            <p class="card-text text-truncate">
+            <p class="card-text">
               {{ video.snippet.title }}
             </p>
-            <button class="btn btn-primary">추가</button>
+            <btn btn-primary>추가</ㅠ>
           </div>
         </div>
-      </li>
-    </div>
+      </div>
+    </li>
     <!--Pagination-->
     <footer>
       <ul class="pagination">
@@ -51,9 +46,4 @@ export default {
 };
 </script>
 
-<style>
-.card-text {
-  font-size: 15px;
-  font-weight: 100;
-}
-</style>
+<style></style>

@@ -19,8 +19,8 @@ export default new Vuex.Store({
   getters: {
   },
   mutations: {
-    LOGIN_USER(state, {user, token}) {
-      state.user = user;
+    LOGIN_USER(state, {loginuser, token}) {
+      state.loginUser = user;
       state.token = token;
     },
     SEARCH_VIDEO(state, videos) {
