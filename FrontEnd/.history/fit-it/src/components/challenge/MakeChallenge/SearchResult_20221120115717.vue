@@ -7,7 +7,7 @@
       <div class="card" style="width: 18rem">
         <img
           class="card-img-top"
-          :src="video.snippet.thumbnails.high.url"
+          :src="video.snippet.thumbnails.default.url"
           alt="video-img"
         />
         <div class="card-body">

@@ -14,7 +14,7 @@
                 type="search"
                 placeholder="검색어를 입력하세요."
                 aria-label="Search"
-                size="70"
+                size="60"
                 v-on:keydown.enter.prevent="search"
                 v-model="keyword"
               />

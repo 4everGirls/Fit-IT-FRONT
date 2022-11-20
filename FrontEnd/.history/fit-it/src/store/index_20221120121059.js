@@ -68,7 +68,7 @@ export default new Vuex.Store({
     searchVideo({commit}, keyword) {
       const YOUTUBE_KEY = process.env.VUE_APP_YOUTUBE_API_KEY;
       const API_URL = `https://www.googleapis.com/youtube/v3/search`;
-      console.log(keyword);
+      // console.log(keyword);
       axios({
         url: API_URL,
         // method: "GET",
@@ -77,7 +77,7 @@ export default new Vuex.Store({
           part: 'snippet',
           q: keyword,
           type: 'video',
-          maxResults: 4,
+          maxResults: 3,
         }
       })
         .then((res) => {

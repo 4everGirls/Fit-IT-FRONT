@@ -71,13 +71,13 @@ export default new Vuex.Store({
       console.log(keyword);
       axios({
         url: API_URL,
-        // method: "GET",
+        method: "GET",
         params: {
           key: YOUTUBE_KEY,
           part: 'snippet',
           q: keyword,
           type: 'video',
-          maxResults: 4,
+          maxResults: 3,
         }
       })
         .then((res) => {

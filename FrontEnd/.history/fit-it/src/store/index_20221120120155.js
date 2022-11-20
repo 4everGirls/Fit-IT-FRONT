@@ -77,7 +77,7 @@ export default new Vuex.Store({
           part: 'snippet',
           q: keyword,
           type: 'video',
-          maxResults: 4,
+          maxResults: 3,
         }
       })
         .then((res) => {

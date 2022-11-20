@@ -14,7 +14,7 @@
                 type="search"
                 placeholder="검색어를 입력하세요."
                 aria-label="Search"
-                size="70"
+                size="60"
                 v-on:keydown.enter.prevent="search"
                 v-model="keyword"
               />
@@ -26,6 +26,7 @@
             </button>
           </div>
         </div>
+        <div class="row"></div>
       </div>
     </div>
   </div>
@@ -68,7 +69,6 @@ export default {
   align-items: center;
   flex-direction: column;
 }
-.container {
-  padding: 20px;
+.searchContainer {
 }
 </style>

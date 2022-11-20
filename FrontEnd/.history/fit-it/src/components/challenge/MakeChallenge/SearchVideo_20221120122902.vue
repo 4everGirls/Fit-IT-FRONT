@@ -4,26 +4,25 @@
       <div class="flex-item">
         <h3 class="title">당신만의 챌린지를 만들어 보세요!</h3>
       </div>
-      <div class="flex-item">
-        <div class="row">
-          <div class="col-3"></div>
+      <div class="searchContainer ">
+        
           <div class="col">
             <form class="d-flex col" role="search">
               <input
-                class="form-control me-1"
+                class="form-control me-2"
                 type="search"
                 placeholder="검색어를 입력하세요."
                 aria-label="Search"
-                size="70"
+                size="40"
                 v-on:keydown.enter.prevent="search"
                 v-model="keyword"
               />
             </form>
-          </div>
-          <div class="col">
-            <button class="btn btn-primary" type="submit" @click="search">
-              검색
-            </button>
+            <div class="col">
+              <button class="btn btn-primary" type="submit" @click="search">
+                검색
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -68,7 +67,6 @@ export default {
   align-items: center;
   flex-direction: column;
 }
-.container {
-  padding: 20px;
+.searchContainer {
 }
 </style>
