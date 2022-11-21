@@ -1,0 +1,1 @@
+<i class="fa fa-cube" aria-hidden="true"></i>

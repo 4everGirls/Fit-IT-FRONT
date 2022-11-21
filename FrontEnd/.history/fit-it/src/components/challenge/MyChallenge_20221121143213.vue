@@ -1,0 +1,20 @@
+<template>
+    <div class="container">
+        <h1 class="title">마이 챌린지</h1>
+        <hr>
+    </div>
+</template>
+
+<script>
+export default {
+    name: "MyChallenge",
+
+}
+</script>
+
+<style scoped>
+.title {
+    color: indigo;
+    font
+}
+</style>
