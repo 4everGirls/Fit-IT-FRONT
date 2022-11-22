@@ -2,10 +2,7 @@
   <div>
     <p>여기는 마이페이지</p>
     <manage-my-challenge></manage-my-challenge>
-    <my-book-mark></my-book-mark>
-    <my-level></my-level>
-    <my-profile></my-profile>
-  </div>
+    <my-book-mark></my-book-mark>  </div>
 </template>
 
 <script>

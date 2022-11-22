@@ -7,6 +7,8 @@ import MakeChallenge from "@/views/MakeChallengeView.vue";
 import MyPage from "@/views/MyPageView.vue";
 import DetailChallenge from "@/components/challenge/DetailChallenge.vue";
 
+import RegistUsercopy from "@/components/user/RegistUsercopy.vue"
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -24,6 +26,11 @@ const routes = [
     path: "/regist",
     name: "regist",
     component: RegistUser,
+  },
+  {
+    path: "/registTest",
+    name: "registTest",
+    component: RegistUsercopy,
   },
   {
     path: "/makeChallenge",

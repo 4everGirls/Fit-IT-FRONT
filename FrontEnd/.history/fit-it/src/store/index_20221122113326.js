@@ -247,21 +247,16 @@ export default new Vuex.Store({
       return new Promise((response, reject) => {
         // 비동기 작업 수행
         const API_URL = `${REST_API}/challengeApi/insertMission/${payload.challengeNo}`;
+        console.log(payload.missions);
         let newMissions = payload.missions.map((mission) => {
-          return {
-            videoTitle: mission.videoTitle,
-            challengeNo: payload.challengeNo,
-            videoId: mission.videoId,
-            videoThumbnail: mission.videoThumbnail.url,
-            channelName: mission.channelName
+          return {...mission,
           }
         })
-        console.log(newMissions);
 
         axios({
           url: API_URL,
           method: "POST",
-          data: newMissions,
+          data: payload.missions,
         })
           .then(() => {
             alert("챌린지 등록이 완료되었습니다.");

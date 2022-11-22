@@ -26,6 +26,11 @@ const routes = [
     component: RegistUser,
   },
   {
+    path: "/registTest",
+    name: "registTest",
+    component: RegistUsercopy,
+  },
+  {
     path: "/makeChallenge",
     name: "makeChallenge",
     component: MakeChallenge,

@@ -249,11 +249,8 @@ export default new Vuex.Store({
         const API_URL = `${REST_API}/challengeApi/insertMission/${payload.challengeNo}`;
         let newMissions = payload.missions.map((mission) => {
           return {
-            videoTitle: mission.videoTitle,
-            challengeNo: payload.challengeNo,
-            videoId: mission.videoId,
-            videoThumbnail: mission.videoThumbnail.url,
-            channelName: mission.channelName
+            challengeName: mission.challenge
+            challengeNo: payload.challengeNo
           }
         })
         console.log(newMissions);

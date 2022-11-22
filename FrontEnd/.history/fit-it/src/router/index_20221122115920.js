@@ -4,8 +4,10 @@ import HomeView from "../views/HomeView.vue";
 import RegistUser from "@/components/user/RegistUser.vue";
 import LoginUser from "@/components/user/LoginUser.vue";
 import MakeChallenge from "@/views/MakeChallengeView.vue";
-import MyPage from "@/views/MyPageView.vue";
+import MyPageView from "@/views/MyPageView."
 import DetailChallenge from "@/components/challenge/DetailChallenge.vue";
+
+import RegistUsercopy from "@/components/user/RegistUsercopy.vue"
 
 Vue.use(VueRouter);
 
@@ -26,6 +28,11 @@ const routes = [
     component: RegistUser,
   },
   {
+    path: "/registTest",
+    name: "registTest",
+    component: RegistUsercopy,
+  },
+  {
     path: "/makeChallenge",
     name: "makeChallenge",
     component: MakeChallenge,
@@ -33,7 +40,7 @@ const routes = [
   {
     path: "/myPage",
     name: "myPage",
-    component: MyPage,
+    component: MyPageView,
   },
   {
     path: "/detailChallenge",

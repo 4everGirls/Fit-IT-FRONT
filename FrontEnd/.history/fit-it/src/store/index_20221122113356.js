@@ -247,16 +247,12 @@ export default new Vuex.Store({
       return new Promise((response, reject) => {
         // 비동기 작업 수행
         const API_URL = `${REST_API}/challengeApi/insertMission/${payload.challengeNo}`;
+        console.log(payload.missions);
         let newMissions = payload.missions.map((mission) => {
-          return {
-            videoTitle: mission.videoTitle,
-            challengeNo: payload.challengeNo,
-            videoId: mission.videoId,
-            videoThumbnail: mission.videoThumbnail.url,
-            channelName: mission.channelName
+          return {...mission,
+            challengeNo: payload.challengeNo
           }
         })
-        console.log(newMissions);
 
         axios({
           url: API_URL,

@@ -4,7 +4,7 @@
     <manage-my-challenge></manage-my-challenge>
     <my-book-mark></my-book-mark>
     <my-level></my-level>
-    <my-profile></my-profile>
+    <my-profil></my-profil>
   </div>
 </template>
 
