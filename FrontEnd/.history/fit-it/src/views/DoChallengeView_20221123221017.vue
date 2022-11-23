@@ -54,10 +54,10 @@ import SideBar from "@/components/challenge/DoChallenge/SideBar.vue";
 export default {
   name: "DoChallengeView",
   components: {
-    // MissionComentList,
+    MissionComentList,
     MissionVideo,
     SideBar,
-    // WriteMissionComent,
+    WriteMissionComent,
   },
 };
 </script>

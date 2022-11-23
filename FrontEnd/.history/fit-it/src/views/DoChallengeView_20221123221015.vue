@@ -46,7 +46,7 @@
 </template>
 
 <script>
-// import MissionComentList from "@/components/challenge/DoChallenge/MissionComentList.vue";
+import MissionComentList from "@/components/challenge/DoChallenge/MissionComentList.vue";
 import MissionVideo from "@/components/challenge/DoChallenge/MissionVideo.vue";
 import SideBar from "@/components/challenge/DoChallenge/SideBar.vue";
 // import WriteMissionComent from "@/components/challenge/DoChallenge/WriteMissionComent.vue";
@@ -54,10 +54,10 @@ import SideBar from "@/components/challenge/DoChallenge/SideBar.vue";
 export default {
   name: "DoChallengeView",
   components: {
-    // MissionComentList,
+    MissionComentList,
     MissionVideo,
     SideBar,
-    // WriteMissionComent,
+    WriteMissionComent,
   },
 };
 </script>

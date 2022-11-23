@@ -6,7 +6,7 @@
       </div>
       <li v-for="(mission, index) in indetailGetMissionList" :key="index">
         <p @click="getMissionVideo(mission.missionNo)">
-          {{ mission.videoTitle }}
+          {{ video.videoTitle }}
         </p>
       </li>
     </div>

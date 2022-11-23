@@ -57,7 +57,7 @@ export default {
     // MissionComentList,
     MissionVideo,
     SideBar,
-    // WriteMissionComent,
+    WriteMissionComent,
   },
 };
 </script>

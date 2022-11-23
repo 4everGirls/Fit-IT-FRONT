@@ -5,8 +5,8 @@
         {{ challenge.challengeName }}
       </div>
       <li v-for="(mission, index) in indetailGetMissionList" :key="index">
-        <p @click="getMissionVideo(mission.missionNo)">
-          {{ mission.videoTitle }}
+        <p @click="getMissionVideo(video.missionNo)">
+          {{ video.videoTitle }}
         </p>
       </li>
     </div>
@@ -22,7 +22,7 @@ export default {
   },
   created() {
     this.$store.dispatch("getDetailChallenge", this.$route.params.challengeNo);
-    //console.log(this.$route.params.challengeNo);
+    console.log(this.$route.params.challengeNo);
     this.$store.dispatch(
       "inDetailGetMissionList",
       this.$route.params.challengeNo
