@@ -16,6 +16,8 @@
     "core-js": "^3.8.3",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
+    "sass": "^1.56.1",
+    "scss": "^0.2.4",
     "vue": "^2.6.14",
     "vue-datepicker-ui": "^2.3.0",
     "vue-el-datepicker": "^1.1.0",
