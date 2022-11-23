@@ -1,0 +1,1 @@
+GET ${REST_API}/challengeApi/participantInfo/${challengeNo}

@@ -1,0 +1,46 @@
+<template>
+  <div>
+    <h2>{{ thindetailGetMissionList.videoTitle}}</h2>
+    <div class="row">
+      <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            
+          </div>
+          
+      </div>
+      <div class="row">
+        <iframe
+          width="560"
+          height="315"
+          :src="videoURL"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    
+  </div>
+</template>
+
+<script>
+import { mapState } from "vuex";
+import BookMark from "./BookMark.vue";
+
+export default {
+  name: "MissionVideo",
+  components: {
+    BookMark,
+  },
+  computed: {
+    ...mapState(["video", "indetailGetMissionList"]),
+    videoURL() {
+      const videoid = this.video.videoId;
+      return `https://www.youtube.com/embed/${videoid}`;
+    },
+  },
+};
+</script>
+
+<style scoped></style>

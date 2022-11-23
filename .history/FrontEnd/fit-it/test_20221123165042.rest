@@ -1,0 +1,3 @@
+GET http://localhost:9999/challengeApi/participantInfo/1
+###
+GET http://localhost:9999/challengeApi/participantInfo/1
