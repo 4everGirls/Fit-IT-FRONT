@@ -118,9 +118,9 @@ export default {
 };
 </script>
 
-<style scoped>
-.result-container {
+<style scoped></style>
+/* .result-container {
   background-color: f8f9fa;
   border-radius: 10px;
-}
+} */
 </style>
