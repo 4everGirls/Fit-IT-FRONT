@@ -1,0 +1,135 @@
+<template>
+  <div>
+    <div class="row">
+      <div class="col align-middle"><h1 class="title">오픈된 챌린지</h1></div>
+      <div class="col  d-flex align-items-end " id="temp">
+        <button class="mb-0 ms- btn btn-primary align-middle" in="challengeBtn">
+          <router-link to="/makeChallenge" class="challengeBtn"
+            ><i class="bi bi-pencil-square"></i> 챌린지 만들기</router-link
+          >
+        </button>
+      </div>
+      <div class="col-6"></div>
+    </div>
+    <div class="row">
+      <li
+        class="col-4"
+        v-for="(challenge, challengeIdx) in challenges"
+        :key="challengeIdx"
+      >
+        <router-link
+          :to="`/detailChallenge/${challenge.challengeNo}`"
+          class="open-challenge"
+        >
+          <div class="box">
+            <p class="challenge-title">{{ challenge.challengeName }}</p>
+            <p class="challenge-period">
+              &nbsp;<i class="bi bi-calendar-check"></i> &nbsp; &nbsp;{{
+                startd(challenge.stardDate)
+              }}
+              -
+              {{ endd(challenge.endDate) }}
+            </p>
+            <!-- <p class="challenge-content text-truncate">
+              {{ challenge.challengeContent }}
+            </p> -->
+            <p id="missionlist">
+              &nbsp;<i class="bi bi-card-list"></i> &nbsp;미션리스트
+            </p>
+            <li
+              v-for="(mission, missonIdx) in challenge.missions"
+              :key="missonIdx"
+              class="mission-list text-truncate"
+            >
+              <p>
+                <i class="bi bi-caret-right-fill" style="color: indigo"></i>
+                {{ mission.videoTitle }}
+              </p>
+            </li>
+          </div>
+        </router-link>
+      </li>
+    </div>
+  </div>
+</template>
+
+<script>
+import { mapState } from "vuex";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import moment from "moment";
+
+export default {
+  name: "OpenChallenge",
+  computed: {
+    ...mapState(["challenges"]),
+    startd() {
+      return (start) => {
+        return moment(start).format("YY/MM/DD");
+      };
+    },
+    endd() {
+      return (end) => {
+        return moment(end).format("YY/MM/DD");
+      };
+    },
+  },
+  created() {
+    this.$store.dispatch("getChallengesAndMissions");
+  },
+  methods: {
+    goDetail(challengeIdx) {
+      let challengeNo = challengeIdx;
+      this.$store.dispatch("goDetail", challengeNo);
+    },
+  },
+};
+</script>
+
+<style scoped>
+.title {
+  color: indigo;
+  font-weight: 800;
+  font-size: 50px;
+  margin: 50px 0 0px 50px;
+}
+.box {
+  background-color: white;
+  border-radius: 10px;
+  width: 400px;
+  height: 380px;
+  margin: 50px;
+  padding: 15px;
+  box-shadow: 5px 5px 10px -5px;
+}
+.challenge-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: indigo;
+}
+.open-challenge {
+  text-decoration: none;
+  color: rgb(0, 12, 22);
+}
+.challengeBtn {
+  color: white;
+  text-decoration: none;
+  padding: 5px 8px 5px 8px;
+  /* height:20px; */
+}
+#temp{
+  padding: 10px;
+}
+.align-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+#missionlist {
+  font-weight: bold;
+  color: #993399;
+}
+.mission-list {
+  font-size: 14px;
+}
+</style>
